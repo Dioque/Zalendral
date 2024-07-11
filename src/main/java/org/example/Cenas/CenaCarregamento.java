@@ -5,7 +5,7 @@ import java.awt.*;
 public class CenaCarregamento extends Canvas {
 
     public CenaCarregamento(){
-        setSize(600, 400);
+
         setBackground(Color.BLUE);
 
     }

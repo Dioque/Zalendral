@@ -18,7 +18,7 @@
 
 ---------------  S U M M A R Y ------------
 
-Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\lib\idea_rt.jar=55610:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 org.example.TelaInicial
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\lib\idea_rt.jar=55610:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 org.example.CenaRenderizador
 
 Host: AMD Ryzen 7 5700U with Radeon Graphics         , 16 cores, 11G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
 Time: Tue Jul  9 23:21:02 2024 Hora oficial do Brasil elapsed time: 13.397317 seconds (0d 0h 0m 13s)
@@ -45,7 +45,7 @@ J 1101 c1 sun.java2d.d3d.D3DVolatileSurfaceManager.initAcceleratedSurface()Lsun/
 J 1099 c1 sun.awt.image.VolatileSurfaceManager.validate(Ljava/awt/GraphicsConfiguration;)I java.desktop@21.0.3 (213 bytes) @ 0x000002598018e7bc [0x000002598018e520+0x000000000000029c]
 J 1125 c1 java.awt.Component$FlipBufferStrategy.revalidate()V java.desktop@21.0.3 (145 bytes) @ 0x00000259801a3d8c [0x00000259801a3860+0x000000000000052c]
 J 1124 c1 java.awt.Component$FlipBufferStrategy.getDrawGraphics()Ljava/awt/Graphics; java.desktop@21.0.3 (12 bytes) @ 0x00000259801a334c [0x00000259801a3240+0x000000000000010c]
-J 911% c2 org.example.TelaInicial.run()V (114 bytes) @ 0x0000025987be5898 [0x0000025987be5740+0x0000000000000158]
+J 911% c2 org.example.CenaRenderizador.run()V (114 bytes) @ 0x0000025987be5898 [0x0000025987be5740+0x0000000000000158]
 j  java.lang.Thread.runWith(Ljava/lang/Object;Ljava/lang/Runnable;)V+5 java.base@21.0.3
 j  java.lang.Thread.run()V+19 java.base@21.0.3
 v  ~StubRoutines::call_stub 0x000002598745100d
@@ -1857,7 +1857,7 @@ Event: 1.130 Thread 0x00000259fe1d5250 Uncommon trap: reason=unstable_if action=
 Event: 1.130 Thread 0x00000259fe1d5250 DEOPT PACKING pc=0x0000025987bddb74 sp=0x000000d621eff220
 Event: 1.130 Thread 0x00000259fe1d5250 DEOPT UNPACKING pc=0x00000259874a46a2 sp=0x000000d621eff1c0 mode 2
 Event: 1.846 Thread 0x00000259ff8f6560 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000025987bd8870 relative=0x0000000000000450
-Event: 1.846 Thread 0x00000259ff8f6560 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000025987bd8870 method=org.example.TelaInicial.run()V @ 90 c2
+Event: 1.846 Thread 0x00000259ff8f6560 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000025987bd8870 method=org.example.CenaRenderizador.run()V @ 90 c2
 Event: 1.846 Thread 0x00000259ff8f6560 DEOPT PACKING pc=0x0000025987bd8870 sp=0x000000d6238ff3f0
 Event: 1.847 Thread 0x00000259ff8f6560 DEOPT UNPACKING pc=0x00000259874a46a2 sp=0x000000d6238ff398 mode 2
 Event: 1.873 Thread 0x00000259ff8f6560 DEOPT PACKING pc=0x000002598013c7f5 sp=0x000000d6238ff3a0
@@ -2053,7 +2053,7 @@ symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Pr
 
 VM Arguments:
 jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\lib\idea_rt.jar=55610:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.3\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
-java_command: org.example.TelaInicial
+java_command: org.example.CenaRenderizador
 java_class_path (initial): C:\Users\dioque\Desktop\Zyrus\testeECS\target\classes
 Launcher Type: SUN_STANDARD
 

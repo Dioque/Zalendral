@@ -83,10 +83,6 @@ public class RenderizacaoSistema {
 
             }
 
-
-            public BufferedImage getTexturaG(){
-                return bufferedImage;
-            }
         }
     }
 }

@@ -12,22 +12,22 @@ import java.awt.event.ActionListener;
 public class GerenciadoCena extends JFrame {
     private CenaCarregamento cenaCarregamento;
     private CenaLogin cenaLogin;
-    private CenaRendereziador cenaRendereziador;
+    private CenaRenderizador cenaRenderizador;
     private JPanel painelBotao;
 
     public GerenciadoCena(){
         setTitle("Zaledral");
-        setSize(900,750);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         cenaCarregamento = new CenaCarregamento();
         cenaLogin = new CenaLogin();
-        cenaRendereziador = new CenaRendereziador();
+        cenaRenderizador = new CenaRenderizador();
 
         painelBotao = new JPanel();
         JButton botaoCenaInicial = new JButton("Inicial");
-        JButton botaoCenaLogin = new JButton("Login");
+        JButton botaoCenaLogin = new JButton("Renderizador");
 
         botaoCenaInicial.addActionListener(new ActionListener() {
             @Override
@@ -39,7 +39,7 @@ public class GerenciadoCena extends JFrame {
         botaoCenaLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mostrarCena(cenaLogin);
+                mostrarCena(cenaRenderizador);
             }
         });
 
@@ -47,7 +47,7 @@ public class GerenciadoCena extends JFrame {
         painelBotao.add(botaoCenaLogin);
 
         add(painelBotao, BorderLayout.NORTH);
-        add(cenaRendereziador);
+        add(cenaLogin);
 
       //
 

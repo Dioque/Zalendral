@@ -14,7 +14,8 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TelaInicial extends Canvas implements Runnable{
+public class CenaRenderizador extends Canvas implements Runnable{
+
 
     private GerenciadoComponente gerenciadoComponente;
     private RenderizacaoSistema renderizacaoSistema;
@@ -25,7 +26,7 @@ public class TelaInicial extends Canvas implements Runnable{
 
     private GalinhaTexturaComponente galinhaTexturaComponente;
 
-    public TelaInicial(){
+    public CenaRenderizador(){
         gerenciadoComponente = new GerenciadoComponente();
         renderizacaoSistema = new RenderizacaoSistema(gerenciadoComponente);
 
@@ -116,31 +117,32 @@ public class TelaInicial extends Canvas implements Runnable{
         }
     }
 
+
     public static void main(String[] args) {
 
-       // JFrame janela = new JFrame("Zaledral");
-
-       // GerenciadoCena janela = new GerenciadoCena();
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new GerenciadoCena();
+                GerenciadoCena gerenciadoCena = new GerenciadoCena();
+
+                CenaRenderizador cenaRenderizador = new CenaRenderizador();
+
+                gerenciadoCena.add(cenaRenderizador);
+
+                Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+                gerenciadoCena.getContentPane().setBackground(Color.BLACK);
+                gerenciadoCena.setSize(dimension);
+                gerenciadoCena.setUndecorated(true);
+                gerenciadoCena.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                gerenciadoCena.setLocationRelativeTo(null);
+                gerenciadoCena.setVisible(true);
+                gerenciadoCena.setResizable(false);
+
+                cenaRenderizador.start();
             }
         });
 
-        //TelaInicial telaInicial = new TelaInicial();
 
-       /* janela.add(telaInicial);
-
-        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
-        janela.getContentPane().setBackground(Color.BLACK);
-        janela.setSize(dimension);
-        janela.setUndecorated(true);
-        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        janela.setLocationRelativeTo(null);
-        janela.setVisible(true);
-        janela.setResizable(false);
-
-        telaInicial.start();*/
     }
+
 }
