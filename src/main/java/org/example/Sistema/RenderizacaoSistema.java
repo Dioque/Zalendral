@@ -17,6 +17,7 @@ public class RenderizacaoSistema {
         this.gerenciadoComponente = gerenciadoComponente;
     }
 
+    public BufferedImage bufferedImage;
     //Renderiza a entidade na tela
     public void renderizador(Graphics g, List<Entidade> entidades, double angular){
 
@@ -38,6 +39,7 @@ public class RenderizacaoSistema {
                         pixelArt.length * tamanhoPixel,
                         BufferedImage.TYPE_INT_ARGB
                 );
+                bufferedImage = textura;
 
                 Graphics2D g2d = textura.createGraphics();
                 for(int altura = 0; altura < pixelArt.length; altura++){
@@ -78,6 +80,12 @@ public class RenderizacaoSistema {
                 }else {
                     g.drawImage(textura, posicao.posX, posicao.posY, null);
                 }
+
+            }
+
+
+            public BufferedImage getTexturaG(){
+                return bufferedImage;
             }
         }
     }

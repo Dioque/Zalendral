@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.Cenas.CenaCarregamento;
 import org.example.Cenas.CenaLogin;
+import org.example.Cenas.CenaRendereziador;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,6 +12,7 @@ import java.awt.event.ActionListener;
 public class GerenciadoCena extends JFrame {
     private CenaCarregamento cenaCarregamento;
     private CenaLogin cenaLogin;
+    private CenaRendereziador cenaRendereziador;
     private JPanel painelBotao;
 
     public GerenciadoCena(){
@@ -21,6 +23,7 @@ public class GerenciadoCena extends JFrame {
 
         cenaCarregamento = new CenaCarregamento();
         cenaLogin = new CenaLogin();
+        cenaRendereziador = new CenaRendereziador();
 
         painelBotao = new JPanel();
         JButton botaoCenaInicial = new JButton("Inicial");
@@ -44,7 +47,7 @@ public class GerenciadoCena extends JFrame {
         painelBotao.add(botaoCenaLogin);
 
         add(painelBotao, BorderLayout.NORTH);
-        add(cenaLogin);
+        add(cenaRendereziador);
 
       //
 
