@@ -36,7 +36,7 @@ public class CenaRenderizador extends Canvas{
         entidades = new ArrayList<>();
 
         RenderizarComponente textura = new RenderizarComponente(galinhaTexturaComponente.pixelArt, galinhaTexturaComponente.colors, 6, true);
-        Entidade galinha1 = new Entidade("Galinha",);
+        Entidade galinha1 = new Entidade("Galinha");
         gerenciadoComponente.addPosicaoComponente(galinha1, new PosicaoComponente(200, 250));
         gerenciadoComponente.addVelocidadeComponente(galinha1, new VelocidadeComponete(4));
         gerenciadoComponente.addRenderizarComponente(galinha1, textura);

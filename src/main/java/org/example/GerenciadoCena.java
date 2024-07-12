@@ -61,5 +61,6 @@ public class GerenciadoCena extends JFrame {
 
         revalidate();
         repaint();
+        System.out.println("Achei o Bug");
     }
 }

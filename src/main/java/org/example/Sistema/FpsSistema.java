@@ -10,9 +10,19 @@ public class FpsSistema implements Runnable{
         this.fps = fps;
     }
 
+    public int posX = 0;
+
+    public int getPosX(){
+        System.out.println("Possição X = "+posX);
+        return posX;
+    }
+
+
+
     @Override
     public void run() {
         //this.setFocusable(true);
+        System.out.println("Texte");
         long lastTime = System.nanoTime();
         long timer = System.currentTimeMillis();
         final double fps = this.fps;
@@ -28,6 +38,7 @@ public class FpsSistema implements Runnable{
                 delta--;
                 renderizadorSistema.renderizador();
                 renderizadorSistema.atualizador();
+                posX ++;
             }
             if (System.currentTimeMillis() - timer > 1000) {
                 timer += 1000;
