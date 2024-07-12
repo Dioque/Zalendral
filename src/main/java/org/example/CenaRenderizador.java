@@ -50,7 +50,7 @@ public class CenaRenderizador extends Canvas{
         entidades.add(galinha2);
 
     }
-    /*JLabel label;
+    JLabel label;
     private void update(){
         angular += 4;
         for (Entidade entidade : entidades){
@@ -62,7 +62,7 @@ public class CenaRenderizador extends Canvas{
                 posicao.posX = 0 + textura.pixelArt[0].length;
             }
         }
-    }*/
+    }
 
     /*private void renderizador(){
         BufferStrategy bs = getBufferStrategy();

@@ -6,6 +6,6 @@ public class RenderizadorSistema {
     }
 
     public void atualizador(){
-        System.out.println("Atualizador carregador...");
+        System.out.println();
     }
 }

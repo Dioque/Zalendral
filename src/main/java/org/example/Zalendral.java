@@ -15,12 +15,6 @@ public class Zalendral{
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 GerenciadoCena gerenciadoCena = new GerenciadoCena();
-                
-                
-                
-               // CenaRenderizador cenaRenderizador = new CenaRenderizador();
-
-              //  gerenciadoCena.add(cenaRenderizador);
 
                 Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
                 gerenciadoCena.getContentPane().setBackground(Color.BLACK);
@@ -31,16 +25,10 @@ public class Zalendral{
                 gerenciadoCena.setVisible(true);
                 gerenciadoCena.setResizable(false);
 
-//                runFPS;
-              //  cenaRenderizador.start();
+                FpsSistema fpsSistema = new FpsSistema(true, 60);
+                fpsSistema.mostrarFPS();
+
             }
         });
         }
-
-
-//    @Override
-//    public void run() {
-//        System.out.println("Run Zalendral.java Stat");
-//        this.runFPS = new FpsSistema(true, 60);
-//    }
 }

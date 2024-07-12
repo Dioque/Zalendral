@@ -1,16 +1,19 @@
 package org.example.Sistema;
 
+import org.example.Cenas.CenaLogin;
+
 public class FpsSistema{
 	
-//	RenderizadorSistema renderizadorSistema = new RenderizadorSistema();
+    RenderizadorSistema renderizadorSistema = new RenderizadorSistema();
 	
-	private boolean correndo;
-	private int fps;
+	boolean correndo;
+	int fps;
 	
 	public FpsSistema(boolean correndo, int fps){
 		this.correndo = correndo;
 		this.fps = fps;
 	}
+
 	
 	public int posX = 0;
 	
@@ -21,6 +24,7 @@ public class FpsSistema{
 	
 	public void mostrarFPS(){
 		  new Thread() {
+              int fps;
 
 		    @Override
 		    public void run() {
@@ -29,7 +33,7 @@ public class FpsSistema{
 		        System.out.println("Texte");
 		        long lastTime = System.nanoTime();
 		        long timer = System.currentTimeMillis();
-		        final double fps = 24;
+		        final double fps = getFps();
 		        double ns = 1000000000 / fps;
 		        double delta = 0;
 		        int frames = 0;
@@ -40,9 +44,11 @@ public class FpsSistema{
 		            if (delta >= 1) {
 		                frames++;
 		                delta--;
-//		                renderizadorSistema.renderizador();
-//		                renderizadorSistema.atualizador();
-		                posX ++;
+		                //renderizadorSistema.renderizador();
+		                //renderizadorSistema.atualizador();
+
+
+                        System.out.println(posX);
 		            }
 		            if (System.currentTimeMillis() - timer > 1000) {
 		                timer += 1000;

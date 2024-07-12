@@ -60,8 +60,6 @@ public class GerenciadoCena extends JFrame {
         botaoCenaLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	FpsSistema fpsSistema = new FpsSistema(true, 24);
-                fpsSistema.mostrarFPS();
                 mostrarCena(cenaRenderizador);
             }
         });
