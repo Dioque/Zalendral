@@ -16,8 +16,9 @@ import java.util.List;
 
 public class CenaRenderizador extends Canvas{
 
-
-    private GerenciadoComponente gerenciadoComponente;
+	private static final long serialVersionUID = 1L;
+	
+	private GerenciadoComponente gerenciadoComponente;
     private RenderizacaoSistema renderizacaoSistema;
     private List<Entidade> entidades;
     private boolean correndo = false;

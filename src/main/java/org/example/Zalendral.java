@@ -1,18 +1,23 @@
 package org.example;
 
+import javax.swing.*;
+
 import org.example.Sistema.FpsSistema;
 
-import javax.swing.*;
 import java.awt.*;
 
-public class Zalendral extends Canvas implements Runnable{
-    static FpsSistema runFPS;
-    public static void main(String[] args) {
+public class Zalendral{
+	
+//    static FpsSistema runFPS;
+
+	public static void main(String[] args) {
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 GerenciadoCena gerenciadoCena = new GerenciadoCena();
-
+                
+                
+                
                // CenaRenderizador cenaRenderizador = new CenaRenderizador();
 
               //  gerenciadoCena.add(cenaRenderizador);
@@ -26,16 +31,16 @@ public class Zalendral extends Canvas implements Runnable{
                 gerenciadoCena.setVisible(true);
                 gerenciadoCena.setResizable(false);
 
-                runFPS;
+//                runFPS;
               //  cenaRenderizador.start();
             }
         });
         }
 
 
-    @Override
-    public void run() {
-        System.out.println("Run Zalendral.java Stat");
-        this.runFPS = new FpsSistema(true, 60);
-    }
+//    @Override
+//    public void run() {
+//        System.out.println("Run Zalendral.java Stat");
+//        this.runFPS = new FpsSistema(true, 60);
+//    }
 }
